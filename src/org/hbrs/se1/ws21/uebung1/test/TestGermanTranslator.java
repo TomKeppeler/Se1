@@ -1,10 +1,11 @@
 package org.hbrs.se1.ws21.uebung1.test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.hbrs.se1.ws21.uebung1.control.GermanTranslator;
 import org.hbrs.se1.ws21.uebung1.control.Translator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestGermanTranslator {
     Translator t1;
