@@ -1,6 +1,7 @@
 {
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "C:\\Users\\tomke\\Documents\\org_junit_platform_junit-platform-console-standalone_1.6.0_junit-platform-cons.jar"
+        "C:\\Users\\tomke\\Documents\\org_junit_platform_junit-platform-console-standalone_1.6.0_junit-platform-cons.jar",
+        "c:\\Users\\tomke\\Documents\\junit-jupiter-api-5.8.1.jar"
     ]
 }
