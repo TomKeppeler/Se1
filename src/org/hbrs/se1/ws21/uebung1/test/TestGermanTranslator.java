@@ -7,6 +7,7 @@ import org.hbrs.se1.ws21.uebung1.control.Translator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+
 public class TestGermanTranslator {
     Translator t1;
     String[] zahlenUebersetzt = {"eins", "zwei", "drei", "vier", "fünf", "sechs", "sieben", "acht", "neun", "zehn"};
