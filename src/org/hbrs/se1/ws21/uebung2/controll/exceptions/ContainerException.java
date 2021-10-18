@@ -1,4 +1,4 @@
-package org.hbrs.se1.ws21.uebung2.controll;
+package org.hbrs.se1.ws21.uebung2.controll.exceptions;
 
 public class ContainerException extends Exception {
     public ContainerException(Integer id){//so kann im Stacktrace die Member id mit ausgegeben werden

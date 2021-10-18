@@ -4,6 +4,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
 
+import org.hbrs.se1.ws21.uebung2.controll.exceptions.ContainerException;
+
 public class Container {
 
     private List<Member> speicher; // Im speicher werden die Member Elemente gespeichert.
@@ -30,7 +32,7 @@ public class Container {
             if (Objects.equals(member.getID(), id)) {// Suche nach dem Element im speicher.
                 speicher.remove(member);// Loeschung des Elements aus dem Speicher.
                 return String.format("Geloescht:[%s]", member.toString());
-            }
+            }// eine Exception zu werfen wäre natürlich eindeutiger da sie auch abgefangen werden kann.
         }
         return String.format("Member Element (%d) nicht vorhanden", id);// kein zu löschendes Element im speicher
                                                                         // gefunden.
