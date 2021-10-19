@@ -1,6 +1,7 @@
 package org.hbrs.se1.ws21.uebung2.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -23,9 +24,9 @@ public class TestContainer {
         testCases[0] = new AutoMitMember(2, 4, "Audi", "A3", "Max Mustermann", 110.4);
         testCases[1] = new AutoMitMember(2, 4, "Fiat", "500", "Lisa Mustermann", 80.47);
         testCases[2] = new PersonMitMember("Mustermann", "Max", new Date(1995, 10, 10), "Golf", 1.8,
-                Geschlecht.maenlich);
+                Geschlecht.MAENLICH);
         testCases[3] = new PersonMitMember("Mustermann", "Lisa", new Date(1995, 10, 10), "Schwimmen", 1.64,
-                Geschlecht.weiblich);
+                Geschlecht.WEIBLICH);
     }
 
     @Test
@@ -44,6 +45,13 @@ public class TestContainer {
                     container.deleteMember(testCases[i].getID()));
             assertEquals(container.size() - i, container.size());
         }
+        try {
+            container.addMember(testCases[0]);
+        } catch (ContainerException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } // Test auf Doppeltes einfüghen
+        assertThrows(ContainerException.class, () -> container.addMember(testCases[0]));
     }
 
     @Test
