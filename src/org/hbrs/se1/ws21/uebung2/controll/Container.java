@@ -18,12 +18,10 @@ public class Container {
         if(member == null){// NullPointerException abfangen.
             throw new IllegalArgumentException();
         }
-
         if (speicher.contains(member)) {// Wenn das Member Element schon im speicher vorhanden ist wird die
                                         // ConatinerException geworfen.
             throw new ContainerException(member.getID());
         }
-
         speicher.add(member);// Member Element wird zum speicher hinzugefühgt.
     }
 
