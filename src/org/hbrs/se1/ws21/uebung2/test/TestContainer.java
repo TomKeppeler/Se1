@@ -61,5 +61,6 @@ public class TestContainer {
         } catch (ContainerException e) {
             assertTrue(true);
         }
+        assertEquals(1, 2);
     }
 }
